@@ -332,6 +332,7 @@ if (program.watch) {
       runner.abort();
     }
     mocha.suite = mocha.suite.clone();
+    mocha.suite.ctx = new Mocha.Context;
     mocha.ui(program.ui);
     loadAndRun();
   });
